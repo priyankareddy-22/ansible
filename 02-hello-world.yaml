@@ -1,4 +1,4 @@
-- name : hello world 
+- name: hello world 
   hosts: local
   connection: local
   tasks:
