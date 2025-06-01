@@ -5,9 +5,18 @@
     COURSE: Ansible
     DURATION: 10Hr
     TRAINER: Priyanka
+
+    vars:
+    COURSE: DevOps with AWs
+    DURATION: 10Hr
+    TRAINER: Naveen
   tasks:
   - name: print course inforamtion 
     vars:
       COURSE: Ansible
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }} , Trainer is {{ TRAINER }}"
+
+  - name: print course inforamtion 
     ansible.builtin.debug:
       msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }} , Trainer is {{ TRAINER }}"
