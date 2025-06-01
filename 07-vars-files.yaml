@@ -1,4 +1,4 @@
-- name: variables from files
+- name: files from variables
   hosts: local
   connections: local
   vars_files:
