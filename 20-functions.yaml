@@ -1,7 +1,22 @@
 - name: fuctions
   hosts: local
   connection: local
+  vars:
+    persons: "priya,navi,gowtam,prami"
   tasks: 
   - name: check undefind variables
     ansible.builtin.debug:
-      msg: "Hello, {{ person }}"
+      msg: "Hello, {{ person | default('priya') }}"
+
+  - name: print names
+    ansible.builtin.dedug:
+      msg: "Hello {{ person | split(',') }}"
+
+  - name: convert map into list 
+    vars:
+      course:
+        name: ansible
+        duration: 10HR
+        trainer: priyanka
+    ansible.builtin.debug:
+      msg: "Course Info: {{ course | dict2items }}"
