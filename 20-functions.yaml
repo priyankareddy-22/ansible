@@ -4,7 +4,7 @@
   vars:
     persons: "priya,navi,gowtam,prami"
   tasks: 
-  - name: check undefind variables
+  - name: check undefined variables
     ansible.builtin.debug:
       msg: "Hello, {{ person | default('priya') }}"
 
