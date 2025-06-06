@@ -11,7 +11,7 @@
   - name: print names
     ansible.builtin.debug:
       msg: "Hello {{ Person | split(',')  }}"
-  - name: covert map into list
+  - name: show coarse details covert map into list
     vars:
       course:
       name: ansible
