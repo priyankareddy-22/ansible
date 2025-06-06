@@ -11,14 +11,14 @@
   - name: print names
     ansible.builtin.debug:
       msg: "Hello {{ Person | split(',')  }}"
-  - name: show course details covert map into list
+  - name: covert map into list
     vars:
       course:
       name: ansible
       duration: 10HR
       trainer: priyanka
     ansible.builtin.debug: 
-      msg: "Course Info: {{ course | dict2items }}"
+      msg: "Course Info: {{  course | dct2items }}""
 
   - name: covert map into list
     vars:
