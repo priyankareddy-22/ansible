@@ -18,7 +18,7 @@
       duration: 10HR
       trainer: priyanka
     ansible.builtin.debug: 
-      msg: "Course Info: {{ course | dict2items }}""
+      msg: "Course Info: {{ course | dict2items }}"
 
   - name: covert map into list
     vars:
