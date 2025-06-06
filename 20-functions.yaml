@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    persons: "priya,navi,gowtam,prami"
+    Persons: "priya,navi,gowtam,prami"
   tasks: 
   - name: check undefined variable
     ansible.builtin.debug:
@@ -10,6 +10,14 @@
 
   - name: print names
     ansible.builtin.debug:
-      msg: "Hello {{ Person  }}"
+      msg: "Hello {{ Person | split(',')  }}"
+  - name: covert map into list
+    vars:
+      course:
+      name: ansible
+      duration: 10HR
+      trainer: priyanka
+    ansible.builtin.debug: 
+      msg: "Course Info: {{ course | dict2items }}"
 
  
