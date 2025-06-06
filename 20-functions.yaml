@@ -1,4 +1,4 @@
-- name: fuctions
+- name: functions
   hosts: local
   connection: local
   vars:
