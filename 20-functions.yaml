@@ -34,3 +34,11 @@
       name: "priyanka reddy"
     ansible.builtin.debug:
       msg: "Hello {{ name | upper }}"
+
+  - name: convert to lowercase
+    vars:
+      name: "priyanka reddy"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | lower }}"
+
+  - name: check the ip address 
