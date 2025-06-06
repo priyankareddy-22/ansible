@@ -20,4 +20,11 @@
     ansible.builtin.debug: 
       msg: "Course Info: {{ course | dict2items }}"
 
- 
+  - name: covert map into list
+    vars:
+      course:
+      - {'key': 'name', 'value': 'ansible'}
+      - {'key': 'duration', 'value': '10HR'}
+      - {'key': 'trainer', 'value': 'priyanka'}
+    ansible.builtin.debug: 
+      msg: "Course Info: {{ course | items2dict }}"
